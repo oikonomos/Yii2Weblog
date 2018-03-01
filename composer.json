@@ -1,0 +1,84 @@
+{
+    "name": "yiisoft/yii2-app-basic",
+    "description": "Yii 2 Basic Project Template",
+    "keywords": ["yii2", "framework", "basic", "project template"],
+    "homepage": "http://www.yiiframework.com/",
+    "type": "project",
+    "license": "BSD-3-Clause",
+    "support": {
+        "issues": "https://github.com/yiisoft/yii2/issues?state=open",
+        "forum": "http://www.yiiframework.com/forum/",
+        "wiki": "http://www.yiiframework.com/wiki/",
+        "irc": "irc://irc.freenode.net/yii",
+        "source": "https://github.com/yiisoft/yii2"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": ">=5.4.0",
+        "yiisoft/yii2": "~2.0.6",
+        "yiisoft/yii2-bootstrap": "~2.0.0",
+        "yiisoft/yii2-swiftmailer": "~2.0.0",
+        "yiisoft/yii2-jui": "^2.0",
+        "2amigos/yii2-date-time-picker-widget" : "~1.0",
+        "2amigos/yii2-file-upload-widget": "~1.0",
+        "2amigos/yii2-chartjs-widget" : "~2.0",
+        "janisto/yii2-timepicker": "*",
+        "branchonline/yii2-lightbox": "*",
+        "nirvana-msu/yii2-prettyphoto": "1.0.*@dev",
+        "bower-asset/angular": "~1.5.11",
+        "bower-asset/angular-animate": "~1.5.11",
+        "bower-asset/angular-aria": "~1.5.11",
+        "bower-asset/angular-cookies": "~1.5.11",
+        "bower-asset/angular-loader": "~1.5.11",
+        "bower-asset/angular-messages": "~1.5.11",
+        "bower-asset/angular-message-format": "~1.5.11",
+        "bower-asset/angular-route": "~1.5.11",
+        "bower-asset/angular-sanitize": "~1.5.11",
+        "bower-asset/angular-touch": "~1.5.11",
+        "conquer/select2": "*",
+        "himiklab/yii2-colorbox-widget": "*",
+        "yiisoft/yii2-imagine": "^2.0",
+        "rmrevin/yii2-fontawesome": "~2.17",
+        "kartik-v/yii2-widget-colorinput": "*",
+        "conquer/oauth2": "*"
+    },
+    "require-dev": {
+        "yiisoft/yii2-debug": "~2.0.0",
+        "yiisoft/yii2-gii": "~2.0.0",
+        "yiisoft/yii2-faker": "~2.0.0",
+
+        "codeception/base": "^2.2.3",
+        "codeception/verify": "~0.3.1",
+        "codeception/specify": "~0.4.3"
+    },
+    "config": {
+        "fxp-asset": {
+            "installer-paths": {
+                "npm-asset-library": "vendor/npm",
+                "bower-asset-library": "vendor/bower"
+            }
+        },
+        "process-timeout": 1800
+    },
+    "extra": {
+    },
+    "scripts": {
+        "post-install-cmd": "php init --env=Development --overwrite=n"
+    },
+    "repositories": [
+        {
+            "type": "package",
+            "package": {
+                "name": "bower-asset/jquery-prettyPhoto",
+                "type": "bower-asset-library",
+                "version": "3.1.6",
+                "source": {
+                    "url": "https://github.com/scaron/prettyphoto",
+                    "type": "git",
+                    "reference": "master"
+                }
+            }
+        }
+    ]
+}
