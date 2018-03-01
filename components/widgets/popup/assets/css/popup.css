@@ -1,0 +1,23 @@
+.popupwrap {
+        z-index: 10100;
+        position: absolute;
+        display: inline-block;
+        top: 0;
+        left: 0;
+        background-color: #ffffff;
+}
+.popupwrap .popup-content {
+        position: relative;
+        display: inline-block;
+}
+.popupwrap .popup-bottom {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        height: 40px;
+        padding: 10px 20px;
+        line-height: 20px;
+        background-color: #f0f0f0;
+        color: #333333;
+        font-size: 13px;
+}

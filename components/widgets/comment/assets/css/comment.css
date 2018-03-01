@@ -1,0 +1,144 @@
+/* comment form css */ 
+#content #comment-form
+{
+    clear: both;
+    display: block;
+    margin: 50px 0 0;
+    border-top: 1px solid #585858;
+    border-left: 1px solid #e1e1e1;
+    border-right: 1px solid #e1e1e1;
+    border-bottom: 1px solid #e1e1e1;
+    padding: 10px 10px;
+    background-color: #ececec;
+}
+#comment-form .comment-form-header
+{
+    clear: both;
+    display: block;
+}
+#comment-form .comment-form-content
+{
+    clear: both;
+    min-height: 150px;
+}
+.comment-form-content .comment-content
+{
+    clear: both;
+    width: 100%;
+    height: 150px;
+    padding: 10px 10px;
+    font-size: 13px;
+}
+.comment-form-content .btn-comment
+{
+    clear: both;
+    display: block;
+    margin: 10px 0 0;
+    width: 100px;
+}
+.comment-form-content .btn-comment:hover
+{
+    color: #ffffff;
+    background-color: #681818;
+}
+/* comment list css */
+#content #comment-list
+{
+    clear: both;
+    display: block;
+    padding: 20px 10px;
+    font-size: 12px;
+}
+#comment-list .comment
+{
+    clear: both;
+    display: block;
+    min-height: 180px;
+    border-top: 1px solid #585858;
+    border-left: 1px solid #e1e1e1;
+    border-right: 1px solid #e1e1e1;
+    border-bottom: 1px solid #e1e1e1;
+    padding: 20px 10px; 
+}
+.comment .comment-header
+{
+    clear: both;
+    width: 100%;
+    height: 30px;
+    border-bottom: 1px dotted #585858;
+    font-weight: 700;
+}
+.comment-header .btn-update
+{
+    display: inline;
+    border: 0;
+    padding: 0;
+    background: transparent;
+}
+.comment-header .btn-update:hover
+{
+    color: #ffffff;
+    background-color: #681818;
+}
+.comment-header .btn-delete
+{
+    display: inline;
+    margin-left: 4px;
+    border: 0;
+    padding: 0;
+    background: transparent;
+}
+.comment-header .btn-delete:hover
+{
+    color: #ffffff;
+    background-color: #681818;
+}
+.comment .comment-content
+{
+    clear: both;
+    width: 100%;
+    padding: 20px 0;
+}
+.comment-content pre
+{
+    border: 0;
+    background: transparent;
+}
+
+/* comment update form css */
+.comment .btn-cancel
+{
+    z-index: 10;
+    float: right;
+    display: inline-block;
+    position: relative;
+    border: 0;
+    background: transparent;
+}
+.comment .btn-cancel:hover
+{
+    background-color: #ff0000;
+}
+.comment .comment-form-content2
+{
+    width: 100%;
+    min-height: 150px;
+}
+.comment-form-content2 .comment-content
+{
+    width: 100%;
+    height: 150px;
+    padding: 10px;
+}
+.comment-form-content2 .btn-comment
+{
+    clear: both;
+    display: block;
+    margin: 10px 0 0;
+    width: 100px;
+}
+.comment-form-content2 .btn-comment:hover
+{
+    color: #ffffff;
+    background-color: #681818;
+}

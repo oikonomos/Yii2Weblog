@@ -1,0 +1,489 @@
+/** layout **/
+div, ul, li {
+        position: relative;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+}
+div {
+        display: block;
+}
+html,
+body {
+    height: 100%;
+}
+
+.wrap {
+    min-height: 100%;
+    height: auto;
+    margin: 0 auto -60px;
+    padding: 0 0 60px;
+}
+.ab-navwrap {
+        z-index: 10000;
+        position: fixed;
+        width: 100%;
+        height: 40px;
+        background: #333333;
+        color: #ddd;
+}
+.wrap > .contents {
+    padding: 70px 15px 20px 175px;
+}
+.footer {
+    height: 60px;
+    background-color: #f5f5f5;
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+}
+
+/** adminbar **/
+.ab-navwrap ul {
+        list-style: none;
+}
+.ab-navwrap ul li a:link,
+.ab-navwrap ul li a:active,
+.ab-navwrap ul li a:visited {
+        color: #ddd;
+        text-decoration: none;
+}
+.ab-navwrap ul li a:hover {
+        color: #ffffff;
+}
+.ab-navwrap > ul {
+        display: inline-block;
+        padding: 0;
+        line-height: 28px;
+        font-size: 14px;
+}
+.ab-navwrap > ul > li {
+        display: inline-block;
+        float: left;
+}
+.ab-navwrap > ul > li > a {
+        display: inline-block;
+        padding: 6px 6px;
+}
+.ab-nav-default {
+        display: inline-block;
+        float: left;
+        margin-left: 20px;
+}
+.ab-nav-secondary {
+        display: inline-block;
+        float: right;
+        margin-right: 20px;
+}
+.ab-greeting {
+        position: relative;
+        background-color: #32373c;
+}
+.ab-greeting:link,
+.ab-greeting:active,
+.ab-greeting:visited {
+        color: #ddd;
+        text-decoration: none;
+}
+.ab-greeting:hover {
+        color: #ffffff;
+        text-decoration: none;
+}
+.ab-greeting img {
+        position: relative;
+        border: 1px solid #c0c0c0;
+        top: -1px;
+}
+.ab-profilewrap {
+        display: none;
+        z-index: 10;
+        position: absolute;
+        width: 250px;
+        height: 100px;
+        top: 40px;
+        right: 0;
+        background-color: #32373c;
+        font-size: 13px;
+}
+.ab-profilewrap img {
+        border: 1px solid #c0c0c0;
+}
+.ab-profilewrap > a {
+        display: inline-block;
+        position: absolute;
+        padding: 10px;
+}
+.ab-profilewrap .ab-profile-nav {
+        float: right;
+        width: 150px;
+        height:  100%;
+}
+.ab-profilewrap .ab-profile-nav a {
+        display: block;
+        width: 100%;
+        height: 30px;
+}
+.ab-profile-nav button {
+        height: 24px;
+        margin: 6px 0 0;
+        border: 0;
+        padding: 0 10px;
+        color: #f0f0f0;
+        background: #0073aa;
+        line-height: 24px;
+} 
+.ab-profile-nav button:hover {
+        color: #ffffff;
+}
+.ab-nav-secondary > li .ab-searchwrap {
+        display: inline-block;
+        hieght: 40px;
+        padding: 6px 0 0;
+}
+.ab-searchwrap input {
+        display: none;
+        float: left;
+        width: 200px;
+        height: 28px;
+        border: 2px solid #333333;
+        border-radius: 4px;
+        padding:  0 5px;
+}
+.ab-searchwrap button {
+        float: left;
+        width: 20px;
+        height: 24px;
+        border: 0;
+        line-height: 32px;
+        background: transparent;
+        font-size: 18px;
+}
+.ab-searchwrap button i {
+        position: relative;
+        top: -3px;
+}
+.ab-searchwrap button:hover {
+        color: #0073aa;
+}
+
+/* sidebar-nav */
+.sb-navwrap {
+        z-index: 999;
+        position: fixed;        
+        width: 160px;
+        height: 100%;
+        background: #333333;
+}
+.sb-navwrap .sb-nav {
+        margin: 45px 0 0 0;
+}
+.sb-navwrap ul {
+        list-style: none;
+        position: relative;
+        margin: 0;
+        padding: 0;
+}
+.sb-navwrap ul li {
+        position: relative;
+}
+.sb-navwrap ul li a {
+        /*color: #ddd;*/
+        text-decoration: none;
+        font-weight: 700;
+}
+.sb-navwrap > ul > li > a {
+        display: block;
+        width: 100%;
+        height: 35px;
+        line-height: 35px;
+        color: #ddd;
+        font-size: 15px;
+        text-indent: 5px;
+}
+/*.sb-navwrap > ul > li > a:link,
+.sb-navwrap > ul > li > a:active,
+.sb-navwrap > ul > li > a:link {
+}
+
+.sb-navwrap > ul > li > a:hover {
+        color: #00892b;
+        background: #191E23;
+}*/
+.sb-navwrap ul ul {
+        display: none;
+        position: relative;
+        width: 160px;
+        padding: 5px 0;
+        background-color: #32373C;
+}
+.sb-navwrap ul ul:before {
+        z-index: 10;
+        display: block;
+        content: ' ';
+        position: absolute;
+        width: 12px;
+        height: 12px;
+        left: -10px;
+        top: 9.5px;
+        background: url('/images/arrow.png') center center no-repeat;
+        font-size: 1px;
+        line-height: 12px;
+}
+.sb-navwrap ul ul li a {
+        display: block;
+        width: 100%;
+        line-height: 30px;
+        color: #bbb;
+        font-size: 14px;
+        text-indent: 10px;
+}
+.sb-navwrap ul ul li a:link
+.sb-navwrap ul ul li a:active
+.sb-navwrap ul ul li a:visited {
+
+}
+.sb-navwrap ul ul li a:hover {
+        color: #00892b;
+}
+.sb-nav > .active {
+        color: #ffffff;
+        background: #0073AA;
+}
+.sb-nav > .active ul {
+        display: block;
+}
+.sb-nav > .active > ul li.active a,
+.sb-nav > .active > ul li.active > a:link,
+.sb-nav > .active > ul li.active > a:active,
+.sb-nav > .active > ul li.active > a:visited,
+.sb-nav > .active > ul li.active > a:hover {
+        color: #ffffff;
+}
+.nav-over,
+.nav-over:link,
+.nav-over:active,
+.nav-over:visited,
+.nav-over:hover {
+        color: #00892b;
+        background: #191E23;
+}
+.sb-nav li.collapse-menu a,
+.sb-nav li.collapse-menu a:link,
+.sb-nav li.collapse-menu a:active,
+.sb-nav li.collapse-menu a:visited,
+.sb-nav li.collapse-menu a:hover {
+        color: #00892b;
+        background: #191E23;
+}
+
+/* jumbtron */
+.jumbotron {
+    text-align: center;
+    background-color: transparent;
+}
+
+.jumbotron .btn {
+    font-size: 21px;
+    padding: 14px 24px;
+}
+
+.not-set {
+    color: #c55;
+    font-style: italic;
+}
+
+/* add sorting icons to gridview sort links */
+a.asc:after, a.desc:after {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    padding-left: 5px;
+}
+
+a.asc:after {
+    content: /*"\e113"*/ "\e151";
+}
+
+a.desc:after {
+    content: /*"\e114"*/ "\e152";
+}
+
+.sort-numerical a.asc:after {
+    content: "\e153";
+}
+
+.sort-numerical a.desc:after {
+    content: "\e154";
+}
+
+.sort-ordinal a.asc:after {
+    content: "\e155";
+}
+
+.sort-ordinal a.desc:after {
+    content: "\e156";
+}
+
+.grid-view th {
+    white-space: nowrap;
+}
+
+.hint-block {
+    display: block;
+    margin-top: 5px;
+    color: #999;
+}
+
+.error-summary {
+    color: #a94442;
+    background: #fdf7f7;
+    border-left: 3px solid #eed3d7;
+    padding: 10px 20px;
+    margin: 0 0 15px 0;
+}
+
+/* align the logout "link" (button in form) of the navbar */
+.nav li > form > button.logout {
+    padding: 15px;
+    border: none;
+}
+
+@media(max-width:767px) {
+        .nav li > form > button.logout {
+            display:block;
+            text-align: left;
+            width: 100%;
+            padding: 10px 15px;
+        }        
+        
+        .sitename {
+                display: none;
+        }
+        
+        .wrap > .contents {
+            padding: 70px 10px 20px 10px;
+        }
+        
+        /* sidebar-nav */
+        .sb-navwrap {
+                width: 160px;
+                height: 100%;
+                background: #333333;
+        }
+
+        .sb-navwrap .sb-nav {
+                margin: 45px 0 0 0;
+        }
+
+        .sb-navwrap ul {
+                list-style: none;
+                position: relative;
+                margin: 0;
+                padding: 0;
+        }
+        .sb-navwrap ul li {
+                position: relative;
+        }
+        .sb-navwrap ul li a {
+                /*color: #ddd;*/
+                text-decoration: none;
+                font-weight: 700;
+        }
+
+        .sb-navwrap > ul > li > a {
+                display: block;
+                width: 100%;
+                height: 35px;
+                line-height: 35px;
+                color: #ddd;
+                font-size: 15px;
+                text-indent: 5px;
+        }
+
+        /*.sb-navwrap > ul > li > a:link,
+        .sb-navwrap > ul > li > a:active,
+        .sb-navwrap > ul > li > a:link {
+        }
+
+        .sb-navwrap > ul > li > a:hover {
+                color: #00892b;
+                background: #191E23;
+        }*/
+
+        .sb-navwrap ul ul {
+                display: none;
+                position: relative;
+                width: 160px;
+                padding: 5px 0;
+                background: #32373C;
+        }
+
+        .sb-navwrap ul ul li a {
+                display: block;
+                width: 100%;
+                line-height: 30px;
+                color: #bbb;
+                font-size: 14px;
+                text-indent: 10px;
+        }
+
+        .sb-navwrap ul ul li a:link
+        .sb-navwrap ul ul li a:active
+        .sb-navwrap ul ul li a:visited {
+
+        }
+
+        .sb-navwrap ul ul li a:hover {
+                color: #00892b;
+        }
+
+        .sb-nav > .active {
+                color: #ffffff;
+                background: #0073AA;
+        }
+        .sb-nav > .active ul {
+                display: block;
+        }
+
+        .sb-nav > .active > ul li.active a,
+        .sb-nav > .active > ul li.active > a:link,
+        .sb-nav > .active > ul li.active > a:active,
+        .sb-nav > .active > ul li.active > a:visited,
+        .sb-nav > .active > ul li.active > a:hover {
+                color: #ffffff;
+        }
+
+        .nav-over,
+        .nav-over:link,
+        .nav-over:active,
+        .nav-over:visited,
+        .nav-over:hover {
+                color: #00892b;
+                background: #191E23;
+        }
+
+        .sb-nav li.collapse-menu a,
+        .sb-nav li.collapse-menu a:link,
+        .sb-nav li.collapse-menu a:active,
+        .sb-nav li.collapse-menu a:visited,
+        .sb-nav li.collapse-menu a:hover {
+                color: #00892b;
+                background: #191E23;
+        }
+}
+
+.nav > li > form > button.logout:focus,
+.nav > li > form > button.logout:hover {
+    text-decoration: none;
+}
+
+.nav > li > form > button.logout:focus {
+    outline: none;
+}
+
+/* index gridview */
+.grid-view table thead tr th {
+        text-align: center;
+}

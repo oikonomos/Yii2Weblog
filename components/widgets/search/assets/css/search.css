@@ -1,0 +1,81 @@
+/** Search **/
+.gsearchform-wrap .gsearchform {
+        position: relative;
+        display: block;
+        width: 400px;
+        height: 50px;
+        margin: 0 auto;
+        border: 2px solid #0073aa;
+}
+.gsearchform-wrap .gsearchform input {
+        position: relative;
+        display: block;
+        float: left;
+        width: 348px;
+        height: 46px;
+        padding-left: 5px;
+        padding-right: 5px;
+}
+.gsearchform-wrap .gsearchform button {
+        position: relative;
+        display: block;
+        float: left;
+        width: 48px;
+        height: 46px;
+        line-height: 46px;
+        border: 2px solid #0073aa;
+        border-width: 0 0 0 2px;
+        padding: 0;
+        background-color: #0073aa;
+        font-size: 30px;
+}
+.gsearchform-wrap .gsearchform button i {
+        position: relative;
+        color: #ffffff;
+}
+
+/** Search2 **/
+.searchresult-wrap {
+        display: table;
+        width: 100%; 
+        border: 1px solid #dddddd;
+        padding: 30px 20px;
+        background-color: #f2f5f9;
+}
+.searchresult-wrap .searchscope {
+        width: 100%;
+        height: 40px;
+        line-height: 40px;
+        text-align: left;
+}
+.searchresult-wrap .searchscope label {
+        display: inline-block;
+        width: 150px;
+        height: 40px;
+        line-height: 40px;
+}
+.searchresult-wrap .searchscope input {
+        display: inline-block;
+}
+.searchresult-wrap .searchscope span.sr-text {
+        display: inline-block;
+        margin: 0 5px;
+}
+.searchresult-wrap .searchform-wrap {
+        width: 100%;
+        text-align: left;
+}
+.searchresult-wrap .searchform-wrap label {
+        display: inline-block;
+        width: 150px;
+}
+.searchresult-wrap .searchform-wrap .searchform {
+        display: inline-block;
+        width: 600px;
+        padding: 0 0 30px;
+}
+.searchresult-wrap .searchresult {
+        display: block;
+        border-top: 1px solid #dddddd;
+        padding: 30px 0 0;
+}
