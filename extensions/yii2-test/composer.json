@@ -1,0 +1,21 @@
+{
+    "name": "test/yii2-test",
+    "description": "test",
+    "type": "yii2-extension",
+    "keywords": ["yii2","extension"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Sangbom, Suhk",
+            "email": "imbeliever@naver.com"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "app\\extentions\\": ""
+        }
+    }
+}
