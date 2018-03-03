@@ -18,7 +18,7 @@ Yii2WeblogAppAsset::register($this);
     <meta charset="<?= Yii::$app->charset ?>">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="성경, 주제별, 언약, 세례, 구약, 신약, 파노라마">
+    <meta name="description" content="">
     <?= Html::csrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
@@ -37,7 +37,7 @@ Yii2WeblogAppAsset::register($this);
                 <ul id="ab-secondary" class="ab-nav-secondary">
                         <li>
                                 <a href="javascript:void(0);" id="ab-greeting" class="ab-greeting">
-                                        안녕하세요 <?=Yii::$app->user->displayName?>님 
+                                        <?=Yii::t('app', 'Hi') ?> <?=Yii::$app->user->displayName?> 
                                         <img src="<?=(Yii::$app->user->userphoto[1])?Yii::$app->user->userphoto[1]:'/images/user/nouserimage_17x17.png'?>" />
                                 </a>
                                 <div id="ab-profilewrap" class="ab-profilewrap">                                        

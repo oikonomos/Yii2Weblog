@@ -649,7 +649,7 @@ CREATE TABLE IF NOT EXISTS `media` (
   `description` text CHARACTER SET utf8,
   PRIMARY KEY (`media_id`),
   KEY `owner_id` (`owner_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=171 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
 
 --
 -- Structure of table `menu`
@@ -668,7 +668,7 @@ CREATE TABLE IF NOT EXISTS `menu` (
   `status` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`menu_id`),
   KEY `owner_id` (`owner_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=18 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 --
 -- Structure of table `migration`
@@ -770,7 +770,7 @@ CREATE TABLE IF NOT EXISTS `option` (
   `value` longtext COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`option_id`),
   UNIQUE KEY `name` (`name`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
 
 --
 -- Structure of table `popup`
@@ -793,7 +793,7 @@ CREATE TABLE IF NOT EXISTS `popup` (
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL,
   PRIMARY KEY (`popup_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
 
 --
 -- Structure of table `post`
@@ -825,7 +825,7 @@ CREATE TABLE IF NOT EXISTS `post` (
   PRIMARY KEY (`po_id`),
   KEY `author_id` (`author_id`),
   KEY `term_taxonomy_id` (`term_taxonomy_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=61 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
 
 
 --
@@ -839,7 +839,7 @@ CREATE TABLE IF NOT EXISTS `postmeta` (
   `meta_value` text COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`meta_id`),
   UNIQUE KEY `post_id` (`post_id`,`meta_key`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=57 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
 
 --
 -- Structure of table `term`
@@ -853,7 +853,7 @@ CREATE TABLE IF NOT EXISTS `term` (
   PRIMARY KEY (`term_id`),
   UNIQUE KEY `name` (`name`),
   UNIQUE KEY `slug` (`slug`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=21 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
 
 
 --
@@ -896,7 +896,7 @@ CREATE TABLE IF NOT EXISTS `term_taxonomy` (
   UNIQUE KEY `term_id_taxonomy` (`term_id`,`taxonomy`) USING BTREE,
   KEY `taxonomy` (`taxonomy`),
   KEY `fk2_taxonomy_taxonomy` (`parent`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=18 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
 
 --
 -- Structure of table `user`
@@ -920,7 +920,7 @@ CREATE TABLE IF NOT EXISTS `user` (
   UNIQUE KEY `username` (`username`),
   UNIQUE KEY `email` (`email`),
   UNIQUE KEY `password_reset_token` (`password_reset_token`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
 
 --
 -- Structure of table `usermeta`
@@ -934,7 +934,7 @@ CREATE TABLE IF NOT EXISTS `usermeta` (
   PRIMARY KEY (`meta_id`),
   UNIQUE KEY `user_id` (`user_id`,`meta_key`),
   KEY `user_id_2` (`user_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
 
 --
 -- Structure of table `websight_log`
@@ -954,7 +954,7 @@ CREATE TABLE IF NOT EXISTS `websight_log` (
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`idx`),
   KEY `user_id` (`user_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=176715 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
 
 --
 -- Structure of table `websight_log_browser`
@@ -966,7 +966,7 @@ CREATE TABLE IF NOT EXISTS `websight_log_browser` (
   `hit` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`idx`),
   KEY `browser` (`browser`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=41 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
 
 --
 -- Structure of table `websight_log_counter`
@@ -1007,7 +1007,7 @@ CREATE TABLE IF NOT EXISTS `websight_log_counter` (
   UNIQUE KEY `yyyy` (`yyyy`,`mm`,`dd`),
   KEY `yyyy_2` (`yyyy`),
   KEY `mm` (`mm`,`dd`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=251 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
 
 --
 -- Structure of table `websight_log_domain`
@@ -1019,7 +1019,7 @@ CREATE TABLE IF NOT EXISTS `websight_log_domain` (
   `hit` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`idx`),
   KEY `domain` (`domain`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=74 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
 
 --
 -- Structure of table `websight_log_ip`
@@ -1031,7 +1031,7 @@ CREATE TABLE IF NOT EXISTS `websight_log_ip` (
   `hit` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`idx`),
   KEY `ip` (`ip`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=55848 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
 
 --
 -- Structure of table `websight_log_keyword`
@@ -1043,7 +1043,7 @@ CREATE TABLE IF NOT EXISTS `websight_log_keyword` (
   `hit` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`idx`),
   KEY `keyword` (`keyword`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
 
 --
 -- Structure of table `websight_log_os`
@@ -1055,7 +1055,7 @@ CREATE TABLE IF NOT EXISTS `websight_log_os` (
   `hit` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`idx`),
   KEY `os` (`os`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=14 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
 
 --
 -- Structure of table `websight_log_page`
@@ -1067,7 +1067,19 @@ CREATE TABLE IF NOT EXISTS `websight_log_page` (
   `hit` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`idx`),
   KEY `page` (`page`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=4557 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
+
+--
+-- Structure of table `websight_log_referer`
+--
+
+CREATE TABLE IF NOT EXISTS `websight_log_referer` (
+  `idx` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `referer` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `hit` int(11) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`idx`),
+  KEY `referer` (`referer`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=0 ;
 
 --
 -- Structure of table `websight_log_searchengin`
@@ -1079,7 +1091,7 @@ CREATE TABLE IF NOT EXISTS `websight_log_searchengin` (
   `hit` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`idx`),
   KEY `searchengin` (`searchengin`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=10 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
 
 --
 -- Constraints for dumped tables

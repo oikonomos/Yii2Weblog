@@ -352,6 +352,7 @@ return [
         /* User */
         'Edit Profile' => '프로필 수정하기',
         'Profile' => '프로필',
+        'Hi' => '안녕하세요',
         
         /* Comment Messages */
         'Written coment was saved.' => '작성된 댓글이 저장되었습니다.',

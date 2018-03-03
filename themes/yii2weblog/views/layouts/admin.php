@@ -38,7 +38,7 @@ Yii2WeblogAdminAsset::register($this);
                 <ul id="ab-secondary" class="ab-nav-secondary">
                         <li>
                                 <a href="javascript:void(0);" id="ab-greeting" class="ab-greeting">
-                                        안녕하세요 <?=Yii::$app->user->displayName?>님 
+                                        <?=Yii::t('app', 'Hi') ?> <?=Yii::$app->user->displayName?> 
                                         <img src="<?=(Yii::$app->user->userphoto[1])?Yii::$app->user->userphoto[1]:'/images/user/nouserimage_17x17.png'?>" />
                                 </a>
                                 <div id="ab-profilewrap" class="ab-profilewrap">                                        
