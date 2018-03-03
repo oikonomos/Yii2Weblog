@@ -4,8 +4,8 @@ $params = require(__DIR__ . '/params.php');
 $config = [
         'id' => 'basic',
         'name' => 'Your Site Name',
-        'language' => 'ko',
-        'sourceLanguage' => 'ko-KR',
+        'language' => 'en',
+        'sourceLanguage' => 'en-US',
         'charset' => 'utf-8',
         'basePath' => dirname(__DIR__),
         'bootstrap' => ['log'],
@@ -77,9 +77,9 @@ $config = [
                                         'class' => 'yii\authclient\OAuth2',
                                         'clientId' => 'unique client_id',
                                         'clientSecret' => 'client_secret',
-                                        'tokenUrl' => 'http://www.enagape.org/auth/token',
-                                        'authUrl' => 'http://www.enagape.org/auth/index',
-                                        'apiBaseUrl' => 'http://www.enagape.org/api',
+                                        'tokenUrl' => 'http://example.com/auth/token',
+                                        'authUrl' => 'http://example.com/auth/index',
+                                        'apiBaseUrl' => 'http://example.com/api',
                                 ],
                         ],
                 ],
@@ -100,7 +100,7 @@ if (YII_ENV_DEV) {
         $config['modules']['gii'] = [
                 'class' => 'yii\gii\Module',
                 // uncomment the following to add your IP if you are not connecting from localhost.
-                'allowedIPs' => ['127.0.0.1', '::1', 'xxx.xxx.xxx.xxx'],
+                'allowedIPs' => ['127.0.0.1', '::1', 'your ip'],
         ];
 }
 

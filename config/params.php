@@ -2,7 +2,7 @@
 
 return [
     'adminEmail' => 'admin@example.com',
-    'defaultUrl' => 'http://www.enagape.org',
-    'imgUrl' => 'http://www.enagape.org/images',
-    'themeUrl' => 'http://www.enagape.org/themes',
+    'defaultUrl' => 'http://example.com',
+    'imgUrl' => 'http://example.com/images',
+    'themeUrl' => 'http://example.com/themes',
 ];
