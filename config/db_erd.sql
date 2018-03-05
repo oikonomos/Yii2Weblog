@@ -894,8 +894,7 @@ CREATE TABLE IF NOT EXISTS `term_taxonomy` (
   `reply_level` varchar(64) COLLATE utf8_unicode_ci DEFAULT 'author',
   PRIMARY KEY (`term_taxonomy_id`),
   UNIQUE KEY `term_id_taxonomy` (`term_id`,`taxonomy`) USING BTREE,
-  KEY `taxonomy` (`taxonomy`),
-  KEY `fk2_taxonomy_taxonomy` (`parent`)
+  KEY `taxonomy` (`taxonomy`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
 
 --
@@ -1187,7 +1186,6 @@ ALTER TABLE `termmeta`
 -- Constraints for table `term_taxonomy`
 --
 ALTER TABLE `term_taxonomy`
-  ADD CONSTRAINT `fk2_taxonomy_taxonomy` FOREIGN KEY (`parent`) REFERENCES `term_taxonomy` (`term_taxonomy_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   ADD CONSTRAINT `taxonomy_term_fk` FOREIGN KEY (`term_id`) REFERENCES `term` (`term_id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --

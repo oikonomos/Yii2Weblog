@@ -15,16 +15,16 @@ use nirvana\prettyphoto\PrettyPhoto;
 /* @var $searchModel app\models\PostSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = $taxonomy->name . ' 글목록';
+$this->title = $taxonomy->name;
 $this->params['breadcrumbs'][] = $this->title;
 
 $searchOptions = [
-    ['key' =>'', 'value'=>'선택' ],
-    ['key' =>'title', 'value'=>'제목' ],
-    ['key' =>'content', 'value'=>'내용' ],
-    ['key' =>'writer', 'value'=>'작성자' ],
-    ['key' =>'email', 'value'=>'이메일' ],
-    ['key' =>'created_at', 'value'=>'작성일' ],
+    ['key' =>'', 'value'=>Yii::t('app', 'Select') ],
+    ['key' =>'title', 'value'=>Yii::t('app', 'Title') ],
+    ['key' =>'content', 'value'=>Yii::t('app', 'Content') ],
+    ['key' =>'writer', 'value'=>Yii::t('app', 'Writer') ],
+    ['key' =>'email', 'value'=>Yii::t('app', 'Email') ],
+    ['key' =>'created_at', 'value'=>Yii::t('app', 'Create At') ],
 ];
 
 $headerColor = trim($taxonomy->color2, '#');
@@ -32,12 +32,12 @@ $headerLineColor = trim($taxonomy->color, '#');
 $headerFontColor = trim($taxonomy->font, '#');
 
 $params = [
-    'number' => '번호',
+    'number' => Yii::t('app', 'No'),
     //'checkbox' => Html::checkbox( 'checkall', false, [ 'class'=>'checkbox' ] ),
-    'title' => '제목',
-    'writer' => '작성자',
-    'date' => '작성일',
-    'counter' => '조회수',
+    'title' => Yii::t('app', 'Title'),
+    'writer' => Yii::t('app', 'Writer'),
+    'date' => Yii::t('app', 'Created At'),
+    'counter' => Yii::t('app', 'Hit'),
 ]
 ?>
 
@@ -68,32 +68,31 @@ $params = [
         <?php ActiveForm::end(); ?>
 
         <div class="list-buttons">
-                <?= Html::a('글쓰기', ['create'], ['class' => 'FR btn-write', 'role'=>'button']) ?>
+                <?= Html::a('Create Post', ['create'], ['class' => 'FR btn-write', 'role'=>'button']) ?>
         </div>
 
         <?php $form2 = ActiveForm::begin([
-                'id' => 'search',
+                'id' => 'listsearch',
                 'method' => 'post',
-                'action' => Url::to(['post/gallery', 'tt_id' => $_GET['tt_id']]),
+                'action' => Url::to(['post/gallery', 'tt_id' => $taxonomy->term_taxonomy_id]),
                 'options' => [ 'name' => 'search' ]
         ]); ?>
-        <?php echo Html::hiddenInput('tt_id', $_GET['tt_id']) ?>
-        <div class="searchform-wrap">
-                <div class="searchform">
-                        <?php echo $form2->field($searchForm, 'sfld', ['template'=>'{input}', 'options'=>['class'=>'searchfield-wrap']])->dropDownList(
-                                ArrayHelper::map(
-                                    $searchOptions,
-                                    'key',
-                                    'value'
-                                ),
-                                [
-                                    'class' => 'searchfield'
-                                ]
-                        ); ?>
-                        <?php echo $form2->field($searchForm, 'stx', ['template'=>'{input}', 'options'=>['class'=>'searchtext-wrap']])->textInput(['class'=>'searchtext']); ?>
-                        <?= Html::button('검색', ['id'=>'btn-search', 'class'=>'btn-search']) ?>
+                <div class="searchform-wrap">
+                        <div class="searchform">
+                                <?php echo $form2->field($searchForm, 'sfld', ['template'=>'{input}', 'options'=>['class'=>'searchfield-wrap']])->dropDownList(
+                                        ArrayHelper::map(
+                                                $searchOptions,
+                                                'key',
+                                                'value'
+                                        ),
+                                        [
+                                                'class' => 'searchfield'
+                                        ]
+                                ); ?>
+                                <?php echo $form2->field($searchForm, 'stx', ['template'=>'{input}', 'options'=>['class'=>'searchtext-wrap']])->textInput(['class'=>'searchtext']); ?>
+                                <?= Html::button(Yii::t('app', 'Search'), ['id'=>'btn-listsearch', 'class'=>'btn-search']) ?>
+                        </div>
                 </div>
-        </div>
 
         <?php ActiveForm::end(); ?>
 
@@ -101,29 +100,16 @@ $params = [
 <!-- content::end -->
 
 <?php
-$this->registerJs(
-"
-$('#btn-search').click(function(e){
+$this->registerJs( sprintf("
+$('#btn-listsearch').click(function(e){
     e.stopPropagation();
-    
-    var sfld = $('#searchform-sfld');
-    var stx = $('#searchform-stx');
-    
-    if (!sfld.val()) {
-        alert('검색필드를 선택하세요.');
-        sfld.focus();
-        return false;
-    }
-        
-    if (!stx.val()) {
-        alert('검색어를 입력하세요.');
-        stx.focus();
-        return false;
-    }
-    
-    $('#search').submit();
-});    
-");
+    var a = $('#searchform-sfld');
+    var b = $('#searchform-stx');    
+    if (!a.val()) { alert('%s'); a.focus(); return false; }
+    if (!b.val()) { alert('%s'); b.focus(); return false; }
+    $('#listsearch').submit();
+    console.log($('#listsearch').html());
+}); ", Yii::t('app', 'Select search field.'), Yii::t('app', 'Enter search text.') ));
 ?>
 
 <!-- 원본 사진 보기 -->

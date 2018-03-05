@@ -17,7 +17,7 @@ $headerFontColor = trim($taxonomy->font, '#');
 
 $params = array();
 
-$this->title = $taxonomy->name . ' 글내용보기';
+$this->title = $taxonomy->name;
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 
@@ -34,7 +34,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                 <i class="fa fa-user"></i>&nbsp; 
                                 <span class="ai-name"><?php echo $model->writer?></span> &nbsp;
                                 <span class="ai-date"><?php echo $model->created_at?></span> &nbsp;
-                                조회수 : <span class="hit_count"><?php echo $model->hit_count?></span>
+                                <?=Yii::t('app', 'Hit Count')?> : <span class="hit_count"><?php echo $model->hit_count?></span>
                         </div>
                 </div>
             
@@ -61,16 +61,16 @@ $this->params['breadcrumbs'][] = $this->title;
         </div>
 
         <div class="view-button-group">
-                <?= Html::a('목록', ['list', 'tt_id'=>$model->term_taxonomy_id], ['class' => 'FR btn-list']) ?>
-                <?= Html::a('글쓰기', ['create', 'tt_id'=>$model->term_taxonomy_id], ['class' => 'FR btn-write']) ?>
-                <?= Html::a('삭제', ['delete', 'id' => $model->po_id, 'tt_id'=>$model->term_taxonomy_id , 'pos'=>'web'], [
+                <?= Html::a('List', ['list', 'tt_id'=>$model->term_taxonomy_id], ['class' => 'FR btn-list']) ?>
+                <?= Html::a('Create Post', ['create', 'tt_id'=>$model->term_taxonomy_id], ['class' => 'FR btn-write']) ?>
+                <?= Html::a('Delete', ['delete', 'id' => $model->po_id, 'tt_id'=>$model->term_taxonomy_id , 'pos'=>'web'], [
                     'class' => 'FL btn-delete',
                     'data' => [
-                        'confirm' => '정말로 삭제하시겠습니까? 삭제하면 다시 복원할 수 없습니다.',
+                        'confirm' => Yii::t('app', 'Are you delete this post? If you delete it, it can not be restored.'),
                         'method' => 'post',
                     ],
                 ]) ?>
-                <?= Html::a('수정', ['update', 'id' => $model->po_id, 'tt_id'=>$model->term_taxonomy_id], ['class' => 'FL btn-write']) ?>
+                <?= Html::a('Update Post', ['update', 'id' => $model->po_id, 'tt_id'=>$model->term_taxonomy_id], ['class' => 'FL btn-write']) ?>
         </div>  
      
         <?php
@@ -87,7 +87,7 @@ $this->params['breadcrumbs'][] = $this->title;
 <?php
 $media = $model->getFirstAttachment($model->attachment);
 $image = getimagesize($media->file_path . DIRECTORY_SEPARATOR . $media->filename);
-$this->registerMetaTag( [ 'name' => 'fb:app_id', 'content' => '141827599817914' ] );
+$this->registerMetaTag( [ 'name' => 'fb:app_id', 'content' => 'your fb add_id' ] );
 $this->registerMetaTag( [ 'name' => 'og:title', 'content' => $model->title ] );
 $this->registerMetaTag( [ 'name' => 'og:type', 'content' => 'article' ] );
 $this->registerMetaTag( [ 'name' => 'og:url', 'content' => Yii::$app->params['defaultUrl'] . \yii\helpers\Url::to([ 'post/gview', 'id' => $model->po_id, 'tt_id' => $model->term_taxonomy_id ]) ] );
@@ -97,7 +97,7 @@ $this->registerMetaTag( [ 'name' => 'og:image:height', 'content' => $image[1] ] 
 $this->registerMetaTag( [ 'name' => 'og:image:type', 'content' => $media->file_mime_type ] );
 $this->registerMetaTag( [ 'name' => 'og:description', 'content' => strip_tags($model->excerpt) ] );
 $this->registerMetaTag( [ 'name' => 'og:locale', 'content' => 'ko_KR' ] );
-$this->registerJsFile( '//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5a629deb560f7e07', [
+$this->registerJsFile( '//s7.addthis.com/js/300/addthis_widget.js#pubid=your add this pubid', [
     'position'=> \yii\web\View::POS_END,
     'depends'=>[
         'yii\web\YiiAsset',

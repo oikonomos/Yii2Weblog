@@ -313,6 +313,9 @@ return [
         /* post */
         'Category' => '카테고리',
         'Attachments' => '첨부파일',
+        'Write' => '글쓰기',
+        'Total' => '전체',
+        'Are you delete this post? If you delete it, it can not be restored.' => '정말로 삭제하시겠습니까? 삭제하면 다시 복원할 수 없습니다.',
         
         /* option */
         'Site Privacy' => '개인정보취급방침',
